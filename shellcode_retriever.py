@@ -110,11 +110,11 @@ def main():
         get_and_execute(openurl)
         while retry is True:
             time.sleep(timesleep)
-		get_and_execute(openurl)
+            get_and_execute(openurl)
             
     except Exception, e:
         #print str(e)
         pass
     
 if __name__ == "__main__":
-    	main()
+        main()
