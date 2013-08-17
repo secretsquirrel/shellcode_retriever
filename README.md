@@ -7,7 +7,7 @@ http://www.youtube.com/watch?v=R15B2p-uWKY
 
 ---
 
-For use by IT professionals and researchers.
+For use by IT Security professionals and researchers.
 
 Usage:
 
