@@ -1,5 +1,5 @@
 ##Shellcode Retreiver
-Downloads win32 shellcode from webservers and executes the shellcode without the shellcode touching disk (using the following method: http://www.debasish.in/2012_04_01_archive.html)
+Downloads win32 shellcode from webservers and executes the shellcode without it touching disk (using the following method: http://www.debasish.in/2012_04_01_archive.html)
 
 ---
 
