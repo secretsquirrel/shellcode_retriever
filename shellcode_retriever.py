@@ -62,7 +62,7 @@ def sandbox_check():
             s.connect(('127.0.0.1', 135))
             s.close()
         except:
-            #Message to through the user off:
+            #Message to throw the user off:
             print "Clybase platform checker 2012\nYour platform is:", sys.platform
             sys.exit(0)
         
