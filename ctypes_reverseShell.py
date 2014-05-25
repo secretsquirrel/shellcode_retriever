@@ -146,7 +146,7 @@ def allocate_exe():
                                              )
 
     sInfo = STARTUPINFO()
-    sInfo.cb = ctypes.c_void_p(0)
+    sInfo.cb = ctypes.c_ulong(0)
     sInfo.lpReserved = ctypes.c_void_p(0)
     sInfo.lpDesktop = ctypes.c_void_p(0)
     sInfo.lpTitle = ctypes.c_void_p(0)
