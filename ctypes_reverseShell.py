@@ -145,7 +145,7 @@ def allocate_exe():
                                              ctypes.sizeof(addr)
                                              )
 
-    sInfo = StructStartupInfo()
+    sInfo = STARTUPINFO()
     sInfo.cb = LPVOID(0)
     sInfo.lpReserved = LPVOID(0)
     sInfo.lpDesktop = LPVOID(0)
