@@ -172,7 +172,7 @@ def allocate_exe():
     pinfo.dwThreadID = DWORD(0)
     
     
-    cmd = ctypes.c_char_p('cmd')
+    cmd = ctypes.c_char_p('cmd ')
 
     ctypes.windll.kernel32.CreateProcessA(ctypes.c_int(0),
                                           ctypes.byref(cmd),
